@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroFocus - Concentration Immersive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particules d'arrière-plan -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Fond animé -->
+    <div class="animated-bg"></div>
+
+    <!-- Contenu principal -->
+    <div class="main-container">
+        <!-- En-tête -->
+        <header class="header">
+            <h1 class="title">
+                <span class="neon-text">NEURO</span>
+                <span class="neon-text-alt">FOCUS</span>
+            </h1>
+            <p class="subtitle">Concentration Immersive • Sons Relaxants • Cyberpunk Experience</p>
+        </header>
+
+        <!-- Zone centrale avec effet de flou -->
+        <main class="content-area">
+            <div class="glass-panel">
+                <h2 class="panel-title">Sélectionnez vos ambiances</h2>
+                
+                <!-- Grille de boutons d'ambiance -->
+                <div class="sound-grid">
+                    <button class="sound-btn" data-sound="pluie">
+                        <div class="btn-icon">🌧️</div>
+                        <span class="btn-label">Pluie</span>
+                    </button>
+                    
+                    <button class="sound-btn" data-sound="mer">
+                        <div class="btn-icon">🌊</div>
+                        <span class="btn-label">Océan</span>
+                    </button>
+                    
+                    <button class="sound-btn" data-sound="cafe">
+                        <div class="btn-icon">☕</div>
+                        <span class="btn-label">Café</span>
+                    </button>
+                    
+                    <button class="sound-btn" data-sound="feu">
+                        <div class="btn-icon">🔥</div>
+                        <span class="btn-label">Feu de camp</span>
+                    </button>
+                    
+                    <button class="sound-btn" data-sound="vent">
+                        <div class="btn-icon">💨</div>
+                        <span class="btn-label">Vent</span>
+                    </button>
+                    
+                    <button class="sound-btn" data-sound="bibliotheque">
+                        <div class="btn-icon">📚</div>
+                        <span class="btn-label">Bibliothèque</span>
+                    </button>
+                    
+                    <button class="sound-btn" data-sound="foret">
+                        <div class="btn-icon">🌲</div>
+                        <span class="btn-label">Forêt</span>
+                    </button>
+                    
+                    <button class="sound-btn" data-sound="synthwave">
+                        <div class="btn-icon">🎵</div>
+                        <span class="btn-label">Synthwave</span>
+                    </button>
+                </div>
+
+                <!-- Bouton d'arrêt global -->
+                <button class="stop-all-btn" id="stopAllBtn">
+                    <span class="stop-icon">⏹️</span>
+                    Tout arrêter
+                </button>
+            </div>
+        </main>
+
+        <!-- Contrôles de volume -->
+        <footer class="volume-controls">
+            <div class="volume-panel">
+                <label for="volumeSlider" class="volume-label">Volume Global</label>
+                <div class="volume-slider-container">
+                    <span class="volume-icon">🔊</span>
+                    <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="50">
+                    <span class="volume-value" id="volumeValue">50%</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Éléments audio (cachés) -->
+    <div class="audio-container">
+        <audio id="audio-pluie" loop preload="none">
+            <source src="sons/pluie.mp3" type="audio/mpeg">
+            <source src="sons/pluie.ogg" type="audio/ogg">
+        </audio>
+        
+        <audio id="audio-mer" loop preload="none">
+            <source src="sons/mer.mp3" type="audio/mpeg">
+            <source src="sons/mer.ogg" type="audio/ogg">
+        </audio>
+        
+        <audio id="audio-cafe" loop preload="none">
+            <source src="sons/cafe.mp3" type="audio/mpeg">
+            <source src="sons/cafe.ogg" type="audio/ogg">
+        </audio>
+        
+        <audio id="audio-feu" loop preload="none">
+            <source src="sons/feu.mp3" type="audio/mpeg">
+            <source src="sons/feu.ogg" type="audio/ogg">
+        </audio>
+        
+        <audio id="audio-vent" loop preload="none">
+            <source src="sons/vent.mp3" type="audio/mpeg">
+            <source src="sons/vent.ogg" type="audio/ogg">
+        </audio>
+        
+        <audio id="audio-bibliotheque" loop preload="none">
+            <source src="sons/bibliotheque.mp3" type="audio/mpeg">
+            <source src="sons/bibliotheque.ogg" type="audio/ogg">
+        </audio>
+        
+        <audio id="audio-foret" loop preload="none">
+            <source src="sons/foret.mp3" type="audio/mpeg">
+            <source src="sons/foret.ogg" type="audio/ogg">
+        </audio>
+        
+        <audio id="audio-synthwave" loop preload="none">
+            <source src="sons/synthwave.mp3" type="audio/mpeg">
+            <source src="sons/synthwave.ogg" type="audio/ogg">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
